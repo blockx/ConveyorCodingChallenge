@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="Conveyor.cpp" />
     <ClCompile Include="ConveyorCodingChallenge.cpp" />
-    <ClCompile Include="ItemType.cpp" />
     <ClCompile Include="Loader.cpp" />
     <ClCompile Include="ProductionLine.cpp" />
     <ClCompile Include="Station.cpp" />
@@ -152,7 +151,6 @@
     <ClInclude Include="ItemType.h" />
     <ClInclude Include="Loader.h" />
     <ClInclude Include="ProductionLine.h" />
-    <ClInclude Include="SimBase.h" />
     <ClInclude Include="Station.h" />
     <ClInclude Include="Worker.h" />
   </ItemGroup>

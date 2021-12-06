@@ -1,10 +1,9 @@
 #ifndef __WORKER_H__
 #define __WORKER_H__
 
-#include "SimBase.h"
 #include "ItemType.h"
 
-class Worker : public SimBase
+class Worker
 {
 public:
 	Worker() { item = ItemType::MT; state = WaitingState::ready; }
