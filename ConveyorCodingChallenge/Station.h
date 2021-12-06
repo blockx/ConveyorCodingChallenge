@@ -7,7 +7,7 @@
 class Station
 {
 public:
-	ItemType time_step(ItemType conveyor_place_state);
+	ItemType time_step(ItemType conveyor_place_item);
 
  private:
 	Worker w1;
