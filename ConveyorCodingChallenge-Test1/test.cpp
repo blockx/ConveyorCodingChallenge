@@ -1,10 +1,7 @@
 #include "pch.h"
 
-#include "..\ConveyorCodingChallenge\SimBase.h"
 #include "..\ConveyorCodingChallenge\Worker.h"
 #include "..\ConveyorCodingChallenge\ItemType.h"
-
-#include <iostream>
 
 TEST(TestCaseName, TestName)
 {
@@ -12,11 +9,81 @@ TEST(TestCaseName, TestName)
 	EXPECT_TRUE(true);
 }
 
-TEST(WorkerTest, MTTest)
+TEST(WorkerTest, MT_Test)
 {
-//	Worker w1;
-	ItemType item_in = ItemType::MT;
-//	ItemType item_out = w1.time_step(item_in);
+	Worker w1;
 
-//	EXPECT_EQ(item_in, item_out);
+	ItemType item_in = ItemType::MT;
+	for (int i = 0; i < 10; i++)
+	{
+		ItemType item_out = w1.time_step(item_in);
+		EXPECT_EQ(ItemType::MT, item_out);
+	}
+}
+
+TEST(WorkerTest, Single_A_Test)
+{
+	Worker w1;
+
+	ItemType item_out = w1.time_step(ItemType::A);
+	EXPECT_EQ(ItemType::MT, item_out);
+
+	for (int i = 0; i < 10; i++)
+	{
+		item_out = w1.time_step(ItemType::MT);
+		EXPECT_EQ(ItemType::MT, item_out);
+	}
+}
+
+TEST(WorkerTest, Indefinite_A_Test)
+{
+	Worker w1;
+
+	ItemType item_out = w1.time_step(ItemType::A);
+	EXPECT_EQ(ItemType::MT, item_out);
+
+	for (int i = 0; i < 10; i++)
+	{
+		ItemType item_out = w1.time_step(ItemType::A);
+		EXPECT_EQ(ItemType::A, item_out);
+	}
+}
+
+TEST(WorkerTest, A_Then_B_Test)
+{
+	Worker w1;
+
+	ItemType item_out = w1.time_step(ItemType::A);
+	EXPECT_EQ(ItemType::MT, item_out);
+
+	item_out = w1.time_step(ItemType::B);
+	EXPECT_EQ(ItemType::MT, item_out);
+
+	for (int i = 0; i < 3; i++)
+	{
+		item_out = w1.time_step(ItemType::MT);
+		EXPECT_EQ(ItemType::MT, item_out);
+	}
+
+	item_out = w1.time_step(ItemType::MT);
+	EXPECT_EQ(ItemType::P, item_out);
+
+	for (int i = 0; i < 10; i++)
+	{
+		item_out = w1.time_step(ItemType::MT);
+		EXPECT_EQ(ItemType::MT, item_out);
+	}
+}
+
+#include "..\ConveyorCodingChallenge\ProductionLine.h"
+
+TEST(ProductionLineTest, MT_Test)
+{
+	ProductionLine pl1;
+
+	for (int i = 0; i < 8; i++)
+	{
+		ItemType item_off = pl1.time_step();
+		EXPECT_EQ(ItemType::MT, item_off);
+	}
 }
