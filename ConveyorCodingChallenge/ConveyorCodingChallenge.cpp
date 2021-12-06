@@ -16,7 +16,7 @@ int main()
     int c_Q = 0;
 
     ProductionLine production_line;
-    for (int ts = 0; ts < 100; ts++)
+    for (int tsc = 0; tsc < 100; tsc++)
     {
         ItemType item_off_conveyor = production_line.time_step();
 
@@ -24,27 +24,27 @@ int main()
         {
             case ItemType::MT:
                 c_MT++;
-                break;
+            break;
 
             case ItemType::A:
                 c_A++;
-                break;
+            break;
 
             case ItemType::B:
                 c_B++;
-                break;
+            break;
 
             case ItemType::C:
                 c_C++;
-                break;
+            break;
 
             case ItemType::P:
                 c_P++;
-                break;
+            break;
 
             case ItemType::Q:
                 c_Q++;
-                break;
+            break;
         }
     }
 
