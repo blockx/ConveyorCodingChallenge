@@ -1,15 +1,11 @@
 #ifndef __LOADER_H__
 #define __LOADER_H__
 
-#include "SimBase.h"
 #include "ItemType.h"
 
-class Loader : public SimBase
+class Loader
 {
 public:
-	ItemType time_step(ItemType) { return time_step(); }
-
-private:
 	ItemType time_step();
 };
 

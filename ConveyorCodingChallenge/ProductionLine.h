@@ -4,14 +4,12 @@
 #include "Conveyor.h"
 #include "Loader.h"
 
-class ProductionLine : public SimBase
+class ProductionLine
 {
 public:
-	ItemType time_step(ItemType) { return time_step(); }
-
-private:
 	ItemType time_step();
 
+private:
 	Conveyor conveyor;
 	Loader loader;
 };

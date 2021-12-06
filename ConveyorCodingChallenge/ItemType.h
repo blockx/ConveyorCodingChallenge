@@ -13,6 +13,4 @@ enum class ItemType
 	Q
 };
 
-std::ostream& operator << (std::ostream& os, const ItemType& obj);
-
 #endif // ndef __ITEMTYPE_H__

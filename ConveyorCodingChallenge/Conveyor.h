@@ -6,7 +6,7 @@
 
 #include <deque>
 
-class Conveyor : public SimBase
+class Conveyor
 {
 public:
 	ItemType time_step(ItemType new_item);

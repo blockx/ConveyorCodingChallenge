@@ -21,9 +21,6 @@
     <ClCompile Include="Conveyor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ItemType.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -48,9 +45,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ProductionLine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SimBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Station.h">

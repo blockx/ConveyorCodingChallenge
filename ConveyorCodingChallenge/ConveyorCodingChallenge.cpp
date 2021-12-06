@@ -18,7 +18,7 @@ int main()
     ProductionLine production_line;
     for (int ts = 0; ts < 100; ts++)
     {
-        ItemType item_off_conveyor = production_line.time_step(ItemType::MT);
+        ItemType item_off_conveyor = production_line.time_step();
 
         switch (item_off_conveyor)
         {

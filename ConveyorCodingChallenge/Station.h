@@ -1,11 +1,10 @@
 #ifndef __STATION_H__
 #define __STATION_H__
 
-#include "SimBase.h"
 #include "ItemType.h"
 #include "Worker.h"
 
-class Station : public SimBase
+class Station
 {
 public:
 	ItemType time_step(ItemType conveyor_place_state);
