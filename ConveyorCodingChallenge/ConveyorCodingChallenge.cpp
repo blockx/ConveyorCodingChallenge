@@ -16,7 +16,7 @@ int main()
     int c_Q = 0;
 
     ProductionLine production_line;
-    for (int c_ts = 0; c_ts < 100; c_ts++)
+    for (int timestep = 0; timestep < 100; timestep++)
     {
         ItemType item_off_conveyor = production_line.time_step();
 
