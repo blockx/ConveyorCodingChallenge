@@ -2,9 +2,10 @@
 #include "ItemType.h"
 #include "Station.h"
 
-ItemType Conveyor::time_step(ItemType new_item)
+// Takes item loaded onto conveyor, returns Item fallen off back of conveyor
+ItemType Conveyor::time_step(const ItemType new_item)
 {
-	ItemType item_at_back = conveyor.back();
+	ItemType item_fallen_off_back = conveyor.back();
 	conveyor.pop_back();
 
 	conveyor.push_front(new_item);
@@ -18,5 +19,5 @@ ItemType Conveyor::time_step(ItemType new_item)
 		conveyor[i] = new_conveyor_item;
 	}
 
-	return item_at_back;
+	return item_fallen_off_back;
 }

@@ -9,7 +9,8 @@
 class Conveyor
 {
 public:
-	ItemType time_step(ItemType new_item);
+	// Takes item loaded onto conveyor, returns Item fallen off back of conveyor
+	ItemType time_step(const ItemType new_item);
 
 private:
 	const int no_of_stations = 3;

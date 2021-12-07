@@ -6,6 +6,7 @@
 class Loader
 {
 public:
+	// Generates a random item each time it is called
 	ItemType time_step();
 };
 

@@ -6,9 +6,10 @@
 class Worker
 {
 public:
-	Worker() { item = ItemType::MT; state = WaitingState::ready; }
+	Worker() : item(ItemType::MT), state(WaitingState::ready){ ; }
 
-	ItemType time_step(ItemType conveyor_item);
+	// Pass item on conveyor before work commences, returns item on conveyor after work done by this worker
+	ItemType time_step(const ItemType conveyor_place_item);
 
 private:
 	ItemType item;

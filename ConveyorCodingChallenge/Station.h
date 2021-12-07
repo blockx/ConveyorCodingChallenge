@@ -7,7 +7,8 @@
 class Station
 {
 public:
-	ItemType time_step(ItemType conveyor_place_item);
+	// Pass the existing item on the conveyor, returns the new item on the conveyor place
+	ItemType time_step(const ItemType conveyor_place_item);
 
  private:
 	Worker w1;
