@@ -69,6 +69,8 @@ TEST(WorkerTest, A_Then_B_Test)
 	}
 }
 
+/* ... and so on...*/
+
 #include "..\ConveyorCodingChallenge\ProductionLine.h"
 
 TEST(ProductionLineTest, MT_Test)
@@ -81,3 +83,5 @@ TEST(ProductionLineTest, MT_Test)
 		EXPECT_EQ(ItemType::MT, item_off);
 	}
 }
+
+/* ... and so on...*/
