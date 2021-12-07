@@ -9,11 +9,12 @@ ItemType Conveyor::time_step(ItemType new_item)
 
 	conveyor.push_front(new_item);
 
-	// For each Station in conveyor call time_step()
+	// For each Station in conveyor call time_step() passing in the corresponding item on the conveyor
+	// and replacing it with the item produced by the station
 	for (int i = 0; i < stations.size(); i++)
 	{
-		ItemType item = conveyor[i];
-		ItemType new_conveyor_item = stations[i].time_step(item);
+		ItemType item_on_conveyor = conveyor[i];
+		ItemType new_conveyor_item = stations[i].time_step(item_on_conveyor);
 		conveyor[i] = new_conveyor_item;
 	}
 
