@@ -3,8 +3,8 @@
 
 #include <random>
 
-// Loader time_step() generates a random State for each time it is called
-// Probabilities of each item are given in spec
+// Loader time_step() generates a random item each time it is called
+// Probabilities of generating each item type are given in spec.
 ItemType Loader::time_step()
 {
     ItemType s = ItemType::MT;
